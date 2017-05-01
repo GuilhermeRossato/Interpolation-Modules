@@ -1,3 +1,12 @@
+var f = (x)=>SmoothInterpolation.add(7,3).add(19,2).add(9,2).add(12,4).add(14,4.5).add(20, 0).at(x);
+
+var grapher = new Grapher({
+	f: f,
+	rangeX: [7,14],
+	rangeY: [1,5],
+	width: 300,
+	height: 300
+})
 
 function parseCalculatorNumber(str) {
 	let newStr = "";
