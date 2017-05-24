@@ -1,0 +1,28 @@
+<script src='../SmoothInterpolation.js'></script>
+<script src='https://cdn.rawgit.com/GuilhermeRossato/JsAppHelpers/9d0a6dda/Grapher/Grapher.js'></script>
+<script>
+	let pts = [
+		[0,0],
+		[1,0.5],
+		[2,0.1],
+		[3,0.9],
+		[4,0.5],
+		[5,1]
+	];
+	let s = SmoothInterpolation;
+	pts.forEach(vec => s.add(vec[0], vec[1]));
+	
+	function f(x) {
+		return s.at(x);
+	}
+	let graph = new Grapher({
+	f:f,
+	rangeX: [0,5],
+	rangeY: [0,1],
+	width: 350,
+	height: 350,
+	wrapper: document.body,
+	pixelated: false,
+	left: 0
+});
+</script>

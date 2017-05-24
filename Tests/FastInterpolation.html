@@ -1,0 +1,23 @@
+<script src='../FastInterpolation.js'></script>
+<script src='https://cdn.rawgit.com/GuilhermeRossato/JsAppHelpers/9d0a6dda/Grapher/Grapher.js'></script>
+<script>
+	let pts = [
+		0,0,
+		1,1,
+		2,0.4,
+		3,2
+	];
+	let s = FastInterpolation;
+	
+	function f(x) {
+		return s.any(...pts).at(x);
+	}
+	
+	let graph = new Grapher({
+	f:f,
+	rangeX: [0,3],
+	rangeY: [0,2],
+	width: 350,
+	height: 350
+});
+</script>
