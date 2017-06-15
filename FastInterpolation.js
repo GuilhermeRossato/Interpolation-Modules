@@ -1,20 +1,20 @@
 /*!
-* FastInterpolation
-* This module implements fast linear, quadratic or cubic interpolation in function of points that the equation crosses
-*
-* @author: Guilherme Rossato
-* @year: 2017
-*
-*/
-
-/* Usage Example
-
- Given the points (2,4), (3,6), (4,8), what is y for x=6? [Answer: y = 12]
-	FastInterpolation.quadratic(2,4,3,6,4,8, 6); // Original, fastest
-	FastInterpolation.degree2(2,4,3,6,4,8, 6); // Original, just as fast as the other
-	FastInterpolation.any(2,4,3,6,4,8, 6); // Uses argument length to figure which size automatically, 
-	FastInterpolation.any(2,4,3,6,4,8).at(6); // Figures you sent 6 pairs of (x,y) and gives you an object with .at to evaluate.
-*/
+ *
+ * Class to handle image loading and, when available, uses a saved 'data:image' reply as if it was a cached image.
+ *
+ * @name	FastInterpolation
+ * @type	Javascript Module
+ * @author	Guilherme Rossato
+ * @year	2017
+ * @licence	The Unlicense:  http://unlicense.org/  (no warranties, free to do use / edit / share / sell / claim)
+ *
+ * Usage Example:
+ * Given the points (2,4), (3,6), (4,8), what is y for x=6? [Answer: y = 12]
+ *	FastInterpolation.quadratic(2,4,3,6,4,8, 6); // Original, fastest
+ *	FastInterpolation.degree2(2,4,3,6,4,8, 6); // Original, just as fast as the other
+ *	FastInterpolation.any(2,4,3,6,4,8, 6); // Uses argument length to figure which size automatically, 
+ *	FastInterpolation.any(2,4,3,6,4,8).at(6); // Figures you sent 6 pairs of (x,y) and gives you an object with .at to evaluate.
+ */
 
 const FastInterpolation = (function() {
 	let linear = function(x0, y0, x1, y1, x) {
@@ -76,3 +76,5 @@ const FastInterpolation = (function() {
 		}
 	}
 }());
+
+(typeof exports === "object") && (this.exports = FastInterpolation);
