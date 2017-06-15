@@ -2,7 +2,7 @@
  * Interpolation
  * This module implements full interpolation of any polynomial function using the Lagrange Interpolating Polynomial Technique
  *
- * @name	FastInterpolation
+ * @name	Interpolation
  * @type	Javascript Module
  * @author	Guilherme Rossato
  * @year	2017
