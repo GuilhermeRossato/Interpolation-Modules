@@ -1,6 +1,6 @@
 /*!
  *
- * Class to handle image loading and, when available, uses a saved 'data:image' reply as if it was a cached image.
+ * Module Description Here
  *
  * @name	FastInterpolation
  * @type	Javascript Module
